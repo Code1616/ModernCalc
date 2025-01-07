@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">change theme</button>
+    <div class="calculator">
+        <div class="display">
+            <div class="history"></div>
+            <div class="current">0</div>
+        </div>
+        <div class="buttons">
+            <button class="memory" onclick="memoryStore()">MS</button>
+            <button class="memory" onclick="memoryRecall()">MR</button>
+            <button class="memory" onclick="memoryClear()">MC</button>
+            <button class="memory" onclick="memoryAdd()">M+</button>
+
+            <button class="operator" onclick="operate('sqrt')">√</button>
+            <button class="operator" onclick="operate('pow')">x²</button>
+            <button class="operator" onclick="operate('1/x')">1/x</button>
+            <button class="clear" onclick="clearAll()">C</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="setOperation('/')">/</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="setOperation('*')">×</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="setOperation('-')">-</button>
+
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <button class="operator" onclick="setOperation('+')">+</button>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
